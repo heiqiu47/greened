@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: greened
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/greened?useUnicode=true&characterEncodig=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  servlet:
+    # 应用的访问路径
+    context-path: /api
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+logging:
+  level:
+    web: debug
+    com.qiu.greened: trace
